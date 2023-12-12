@@ -1,0 +1,18 @@
+<ion-content [fullscreen]="true">
+  <swiper-container slides-per-view="2" speed="500" loop="true" css-mode="true">
+    <swiper-slide *ngFor="let p of eventos">
+      <ion-card>
+        <img src={{p.img}} />
+        <ion-card-header>
+          <ion-card-title>{{p.nome}}</ion-card-title>
+          <ion-card-title>{{p.data}}</ion-card-title>
+          <ion-card-subtitle>Eventos da semana</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          R${{p.valor}}
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
+</ion-content>
